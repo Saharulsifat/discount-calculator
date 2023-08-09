@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="contener">
+            <h1>Discount Calculator</h1>
+            <label>Total Purchus</label>
+            <input type="number" placeholder="Enter the amonunt" id="purchus">
+            <label for="j">Discount</label>
+            <input type="number" placeholder="Discount %" id="discount">
+            <p id="result"></p>
+            <button onclick="dis()">Calculate</button>
+            <script>
+                function dis(){
+                    var purchus=document.getElementById("purchus").value
+                    var discount=document.getElementById("discount").value
+                    
+                    var discount_amount=purchus * discount/100
+                    var discounted_price = purchus - discount_amount
+                    var re =document.getElementById("result");
+                    re.innerHTML=discounted_price
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>
